@@ -1,0 +1,312 @@
+/*inicio do cabeçario do site */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* remove a margem padrrõ do site */
+    padding: 0; /* remove o padding padrão do site */
+    background-color: #000;
+    color: #f0f0f0;
+    line-height: 1.6;
+
+}
+
+/* Cabeçalho (Hero Section) */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total da tela */
+    text-align: center;
+    background: url('imagens/bgsite.jpg') no-repeat center center/cover; /* Sua imagem de fundo aqui */
+    background-size: cover;
+    color: #fff; /* Cor do texto branco para contrastar com o fundo */
+    position: relative; /* Necessário para o overlay */
+}
+
+/* Adiciona uma camada escura sobre a imagem para melhorar a legibilidade do texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade (0.4) conforme preferir */
+}
+
+.hero-content {
+    z-index: 1; /* Garante que o conteúdo fique acima do overlay */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff; /* Texto branco */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar ainda mais */
+}
+
+/* Aumentando o espaçamento das seções */
+.section {
+    padding: 6rem 2rem; /* Mantém o espaçamento superior e inferior */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-family: 'serif';
+    font-weight: 300;
+    color: #f0f0f0; /* Um branco levemente acinzentado para o subtítulo */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Garante que o resto do body use um fundo preto para a continuidade */
+body {
+    background-color: #000; /* Fundo preto para o restante do site */
+    color: #f0f0f0; /* Cor do texto padrão para o restante do site */
+}
+
+/* Ajustes para títulos e textos das seções para combinar com o fundo preto */
+.section-title {
+    color: #f0f0f0; /* Títulos das se seções em branco */
+}
+
+.section-title::after {
+    background-color: #fff; /* Linha azul de destaque */
+}
+
+/* termino da parte do cabeçario */
+
+
+/* Estilos para os títulos das seções */
+.section-title {
+    font-size: 2.7rem;
+    font-weight: 300;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 3rem;
+    position: relative;
+    color: #fff;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #007BFF;
+    margin: 1rem auto 0; /* Centraliza a linha */
+}
+
+
+/* Estilos para a seção 'Sobre' */
+.sobre-content {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    color: #ddd;
+}
+
+.sobre-content p {
+    margin-bottom: 1.5rem;
+}
+
+.sobre-content strong {
+    color: #007BFF;
+    font-weight: 2000;
+}
+
+/* Estilos para a seção 'Sobre Mim' */
+.sobre-content {
+    font-size: 1.70rem; /* Aumenta o tamanho da fonte */
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; /* Alinha o texto à esquerda */
+    color: #ddd;
+}
+
+/* Adicionando um espaço extra abaixo da seção 'Sobre Mim' */
+#sobre {
+    margin-bottom: 15vh; /* Aumenta a margem inferior em 15% da altura da janela */
+}
+
+/* Adicionando um espaço extra acima da seção 'Habilidades' */
+#habilidades {
+    margin-top: 15vh; /* Aumenta a margem superior em 15% da altura da janela */
+}
+
+/* Estilos para a seção 'Habilidades' */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.habilidade-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-5px);
+}
+
+.habilidade-card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.habilidade-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habilidade-card li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.habilidade-card p {
+    margin-bottom: 0; /* Remove a margem extra do paragrafo*/
+}
+
+
+/* Estilo de card ofuscado */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .habilidades-grid:hover .habilidade-card {
+    filter: blur(2px);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+  
+  .habilidades-grid .habilidade-card:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  /* teste de escrita de cursor "sobre mim" */
+  .comentario {
+    color: #ccc;        /* cinza claro para simular comentário */
+    font-style: italic;  /* estilo tipo comentário */
+    white-space: pre-wrap; /* mantém quebras de linha se houver */
+    text-align: left; /* texto a esquerda, como um comentário */
+  }
+  
+
+
+/*conteiner de contatos */
+.contato-section {
+    background-color: #6c6c6c; /* cinza do container */
+    padding: 2.5rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contato-container {
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  .contato-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contato-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .contato-container strong {
+    font-weight: 600;
+  }
+  
+/* projeto chamada */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 🔑 IMPORTANTE */
+  align-items: center;
+  justify-content: center;
+  gap: 16px;              /* controla a distância */
+  text-align: center;
+}
+
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #fff;
+  transition: all .35s;
+}
+
+a:hover{
+  width: 200px;
+  border: 3px solid #fff;
+  background: transparent;
+color: #fff
+}
+/*2ecc71 color primary*/
+
+a:hover + .icon{
+  border: 3px solid #fff;
+  right: -25%;
+}
