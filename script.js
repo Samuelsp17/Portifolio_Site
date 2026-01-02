@@ -13,3 +13,23 @@ function digitarComentario() {
 
 // Dispara a digitação quando a página carregar
 window.addEventListener("load", digitarComentario);
+
+
+
+//card de projetos
+const cards = document.querySelectorAll(".project-card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        cards.forEach(other => {
+            if (other !== card) {
+                other.classList.remove("active");
+                other.dataset.open = "false";
+            }
+        });
+
+        const isOpen = card.dataset.open === "true";
+        card.dataset.open = isOpen ? "false" : "true";
+        card.classList.toggle("active");
+    });
+});
